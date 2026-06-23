@@ -38,7 +38,6 @@ Todos os arquivos estão na raiz do repositório:
 - `checkpoint2.c` — Checkpoint 2: Timers0/1 + interrupções externas
 - `projeto2_final.c` — Entrega final: ADC, LED e ajustes de estabilidade
 - `esquematico_final.png` — esquemático do circuito (PIC, botões, LCD, LED, potenciômetro)
-- `projeto2_final.hex` — arquivo compilado pronto pra carregar no simulador
 
 ---
 
@@ -80,7 +79,7 @@ bits e o tratamento do efeito *bouncing* em um botão mecânico.
   pressionado (borda de subida), o programa aguarda 20 ms e
   **confirma** se o nível lógico ainda está em 1 antes de validar o
   aperto. Uma flag auxiliar (`botao_ja_contado`) garante que um único
-  aperto não seja contado múltiplas vezes — ela só é liberada quando o
+  aperto não seja contado múltiplas veze, ela só é liberada quando o
   botão é solto (`botao == 0`).
 
 Arquivo: [`checkpoint1.c`](checkpoint1.c)
@@ -147,7 +146,7 @@ Arquivo: [`projeto2_final.c`](projeto2_final.c)
 3. Compilar (`Ctrl+F9`) para gerar o `.hex`.
 4. No **SimulIDE**, montar o circuito conforme a tabela de hardware
    acima, carregar o `.hex` no componente do PIC (botão direito →
-   *Load Firmware*) e iniciar a simulação.
+   *Load Firmware*) e iniciar a simulação. Lembre-se de colocar o clock do PIC em 8MHz.
 5. Para conferir registradores internos (como `ADCON1` ou `LATC`)
    durante a simulação, clicar com o botão direito sobre o
    microcontrolador → **Open MCU Monitor**.
